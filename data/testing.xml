@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <people type="array">
+    <person>
+      <firstNames>hee</firstNames>
+      <lastName>beatty</lastName>
+      <dateOfBirth>1995-07-26</dateOfBirth>
+      <yearsAtAddress type="integer">15</yearsAtAddress>
+      <passportNumber>IJ834791</passportNumber>
+    </person>
+    <person>
+      <firstNames>julian harry</firstNames>
+      <lastName>schuster</lastName>
+      <dateOfBirth>1960-10-04</dateOfBirth>
+      <yearsAtAddress type="integer">6</yearsAtAddress>
+    </person>
+    <person>
+      <firstNames>neda josephine</firstNames>
+      <lastName>renner</lastName>
+      <dateOfBirth>1989-09-06</dateOfBirth>
+      <address>
+        <line1>9117 Leffler Mountain</line1>
+      </address>
+      <yearsAtAddress type="integer">2</yearsAtAddress>
+      <passportNumber>AS326998</passportNumber>
+    </person>
+    <person>
+      <firstNames>eli</firstNames>
+      <lastName>grady</lastName>
+      <dateOfBirth>1976-08-18</dateOfBirth>
+      <address>
+        <buildingNumber>7239</buildingNumber>
+        <streetName>Medhurst Lock</streetName>
+        <town>Dinahport</town>
+        <postcode>SA08 9OG</postcode>
+      </address>
+      <yearsAtAddress type="integer">12</yearsAtAddress>
+      <passportNumber>LG188987</passportNumber>
+    </person>
+    <person>
+      <firstNames>jenniffer</firstNames>
+      <lastName>o'anderson</lastName>
+      <dateOfBirth>1963-09-19</dateOfBirth>
+      <address>
+        <buildingNumber>61461</buildingNumber>
+        <streetName>Lueilwitz Trace</streetName>
+        <town>Caspershire</town>
+        <postcode>BA3 0LX</postcode>
+      </address>
+      <yearsAtAddress type="integer">2</yearsAtAddress>
+      <passportNumber>SA096429</passportNumber>
+      <nationalInsuranceNumber>31 72 15 52 52 31 25</nationalInsuranceNumber>
+    </person>
+    <person>
+      <firstNames>yong</firstNames>
+      <lastName>o'parisian</lastName>
+      <dateOfBirth>1973-03-02</dateOfBirth>
+      <address>
+        <buildingNumber>9326</buildingNumber>
+        <streetName>Cassin Field</streetName>
+        <town>Emeraldborough</town>
+        <postcode>BA96 3HL</postcode>
+      </address>
+      <yearsAtAddress type="integer">1</yearsAtAddress>
+      <passportNumber>YZ572914</passportNumber>
+      <nationalInsuranceNumber>39 21 96 40 96 12 02</nationalInsuranceNumber>
+    </person>
+  </people>
+</data>

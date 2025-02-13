@@ -3,6 +3,7 @@
 require 'nokogiri'
 require 'date'
 require 'time'
+require 'capitalize_names'
 
 # Require all validators
 require_relative 'identity_records/validation/validators/name_validator'

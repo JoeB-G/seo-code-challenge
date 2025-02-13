@@ -38,6 +38,12 @@ module IdentityRecords
           pp date_of_birth
           expect(AgeValidator.validate(date_of_birth)).to include('must be at least 18 years old')
         end
+
+        it 'returns error when person turned 18 yesterday' do
+          date_of_birth = ((today << (18 * 12)) - 1).to_s
+          pp date_of_birth
+          expect(AgeValidator.validate(date_of_birth)).to be_empty
+        end
       end
     end
   end

@@ -23,12 +23,12 @@ bundle install
 
 To validate the records provided for the code challenge run
 ```bash
-ruby bin/run
+ruby bin/run.rb
 ```
 
 You can also specify any alternate records you would like to run the project against
 ```bash
-ruby bin/run data/test_records.xml
+ruby bin/run.rb data/test_records.xml
 ```
 
 ## Output

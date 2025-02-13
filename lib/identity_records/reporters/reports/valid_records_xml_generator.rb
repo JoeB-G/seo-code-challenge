@@ -24,8 +24,8 @@ module IdentityRecords
       end
 
       def add_person_details(xml, person)
-        xml.firstNames title_case(person.firstNames)
-        xml.lastNames title_case(person.lastNames)
+        xml.firstNames CapitalizeNames.capitalize(person.firstNames)
+        xml.lastNames CapitalizeNames.capitalize(person.lastNames)
         xml.dateOfBirth format_date(person.dateOfBirth)
         xml.yearsAtAddress(person.yearsAtAddress.to_i, type: 'integer')
         xml.passportNumber person.passportNumber
@@ -42,11 +42,6 @@ module IdentityRecords
       def write_xml(builder, directory, filename)
         File.write(File.join(directory, filename), builder.to_xml)
       end
-
-      def title_case(str)
-        str&.split(/\s+/)&.map(&:capitalize)&.join(' ')
-      end
-
       def format_date(date)
         Date.parse(date).strftime('%d, %b, %Y')
       end

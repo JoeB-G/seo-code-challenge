@@ -4,14 +4,14 @@ module IdentityRecords
   module Validators
     # This class groups all the different validators, and uses them on a record, collecting any errors
     # it combines all the errors with reasons into one array and returns ti
-    class RecordValidator
+    class Record
       def self.validate(record)
         errors = {}
         # Name validations
-        first_name_errors = NameValidator.validate(record.firstNames, 'first names')
+        first_name_errors = Name.validate(record.firstNames, 'first names')
         errors[:first_names] = first_name_errors unless first_name_errors.empty?
 
-        last_name_errors = NameValidator.validate(record.lastNames, 'last name')
+        last_name_errors = Name.validate(record.lastNames, 'last name')
         errors[:last_name] = last_name_errors unless last_name_errors.empty?
 
         # Age validation
@@ -23,7 +23,7 @@ module IdentityRecords
         errors[:address] = address_errors unless address_errors.empty?
 
         # Years at address validation
-        years_errors = YearsAtAddressValidator.validate(record.yearsAtAddress)
+        years_errors = YearsAtAddress.validate(record.yearsAtAddress)
         errors[:years_at_address] = years_errors unless years_errors.empty?
 
         # Identification validation

@@ -4,7 +4,7 @@ module IdentityRecords
   module Validators
     # Validates that a record has a configurable number of years spent at their listed address
     # Outputs descriptive errors if invalid
-    module YearsAtAddressValidator
+    module YearsAtAddress
       MINIMUM_YEARS = 5
 
       def self.validate(years)

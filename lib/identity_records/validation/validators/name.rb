@@ -3,7 +3,7 @@ module IdentityRecords
   module Validators
     # Validates that the name on the record meets configurable conditions
     # outputs descriptive errors if invalid
-    module NameValidator
+    module Name
       NAME_REGEX = /^[a-zA-Z' -]+$/
       MAX_LENGTH = 45
 

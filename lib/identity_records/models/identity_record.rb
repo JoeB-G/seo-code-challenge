@@ -19,7 +19,7 @@ module IdentityRecords
       end
 
       def valid?
-        @validation_errors = Validators::RecordValidator.validate(self)
+        @validation_errors = Validators::Record.validate(self)
         @validation_errors.empty?
       end
     end

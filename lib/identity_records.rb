@@ -6,12 +6,12 @@ require 'time'
 require 'capitalize_names'
 
 # Require all validators
-require_relative 'identity_records/validation/validators/name_validator'
-require_relative 'identity_records/validation/validators/age_validator'
-require_relative 'identity_records/validation/validators/address_validator'
-require_relative 'identity_records/validation/validators/years_at_address_validator'
-require_relative 'identity_records/validation/validators/identification_validator'
-require_relative 'identity_records/validation/record_validator'
+require_relative 'identity_records/validation/validators/name'
+require_relative 'identity_records/validation/validators/age'
+require_relative 'identity_records/validation/validators/address'
+require_relative 'identity_records/validation/validators/years_at_address'
+require_relative 'identity_records/validation/validators/identification'
+require_relative 'identity_records/validation/record'
 
 # Require all models
 require_relative 'identity_records/models/address'

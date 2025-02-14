@@ -5,7 +5,7 @@ module IdentityRecords
     # Validates that the address on the record has a line1 and postcode
     # Some records have to have their line1 calculated from other details in the address class
     # outputs descriptive errors
-    module AddressValidator
+    module Address
       def self.validate(address)
         errors = []
 

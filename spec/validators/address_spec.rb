@@ -2,7 +2,7 @@
 
 module IdentityRecords
   module Validators
-    RSpec.describe AddressValidator do
+    RSpec.describe Address do
       let(:valid_address) do
         double('Address',
                line1: '123 Test Street',
@@ -16,7 +16,7 @@ module IdentityRecords
       describe '.validate' do
         context 'with valid addresses' do
           it 'returns no errors when line1 and postcode are present' do
-            expect(AddressValidator.validate(valid_address)).to be_empty
+            expect(Address.validate(valid_address)).to be_empty
           end
 
           it 'returns no errors when using component parts instead of line1' do
@@ -27,7 +27,7 @@ module IdentityRecords
                              street_name: 'Test Street',
                              town: 'London'
             )
-            expect(AddressValidator.validate(address)).to be_empty
+            expect(Address.validate(address)).to be_empty
           end
         end
 
@@ -40,7 +40,7 @@ module IdentityRecords
                              street_name: 'Test Street',
                              town: 'London'
             )
-            expect(AddressValidator.validate(address))
+            expect(Address.validate(address))
               .to include('building number is required when line1 is missing')
           end
 
@@ -52,7 +52,7 @@ module IdentityRecords
                              street_name: nil,
                              town: 'London'
             )
-            expect(AddressValidator.validate(address))
+            expect(Address.validate(address))
               .to include('street name is required when line1 is missing')
           end
 
@@ -64,7 +64,7 @@ module IdentityRecords
                              street_name: 'Test Street',
                              town: nil
             )
-            expect(AddressValidator.validate(address))
+            expect(Address.validate(address))
               .to include('town is required when line1 is missing')
           end
 
@@ -76,7 +76,7 @@ module IdentityRecords
                              street_name: nil,
                              town: nil
             )
-            errors = AddressValidator.validate(address)
+            errors = Address.validate(address)
             expect(errors).to include('building number is required when line1 is missing')
             expect(errors).to include('street name is required when line1 is missing')
             expect(errors).to include('town is required when line1 is missing')
@@ -92,7 +92,7 @@ module IdentityRecords
                              street_name: nil,
                              town: nil
             )
-            expect(AddressValidator.validate(address))
+            expect(Address.validate(address))
               .to include('postcode is required')
           end
 
@@ -104,7 +104,7 @@ module IdentityRecords
                              street_name: nil,
                              town: nil
             )
-            expect(AddressValidator.validate(address))
+            expect(Address.validate(address))
               .to include('postcode is required')
           end
         end
@@ -118,7 +118,7 @@ module IdentityRecords
                              street_name: nil,
                              town: nil
             )
-            errors = AddressValidator.validate(address)
+            errors = Address.validate(address)
             expect(errors).to include('building number is required when line1 is missing')
             expect(errors).to include('street name is required when line1 is missing')
             expect(errors).to include('town is required when line1 is missing')
@@ -135,7 +135,7 @@ module IdentityRecords
                              street_name: '',
                              town: ''
             )
-            errors = AddressValidator.validate(address)
+            errors = Address.validate(address)
             expect(errors).to include('building number is required when line1 is missing')
             expect(errors).to include('street name is required when line1 is missing')
             expect(errors).to include('town is required when line1 is missing')

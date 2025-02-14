@@ -4,9 +4,9 @@ module IdentityRecords
   module Reporters
     # Handles the console output of validation metrics and statistics
     module MetricsReporter
-      def self.report_metrics(valid_people, invalid_people)
+      def self.output(valid_people, invalid_people)
         output_summary(valid_people, invalid_people)
-        output_detailed_metrics(valid_people + invalid_people)
+        output_details(valid_people + invalid_people)
       end
 
       def self.output_summary(valid_people, invalid_people)
@@ -17,7 +17,7 @@ module IdentityRecords
         puts "Total records processed: #{valid_people.length + invalid_people.length}"
       end
 
-      def self.output_detailed_metrics(all_people)
+      def self.output_details(all_people)
         puts "\nDetailed Metrics"
         puts "==============="
         puts "Multiple first names: #{count_more_than_two_first_names(all_people)}"

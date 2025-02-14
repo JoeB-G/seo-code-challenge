@@ -5,7 +5,7 @@ module IdentityRecords
     # Validates that the age of the person on the record is greater than a configurable limit
     # contains helper functions to calculate the persons age from their date of birth
     # outputs descriptive errors if invalid
-    module AgeValidator
+    module Age
 
       MINIMUM_AGE = 18
 

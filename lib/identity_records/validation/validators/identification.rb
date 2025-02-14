@@ -4,7 +4,7 @@ module IdentityRecords
   module Validators
     # Validates that the record has either a passport number or NI number
     # outputs descriptive errors if invalid
-    module IdentificationValidator
+    module Identification
       def self.validate(passport_number, national_insurance_number)
         errors = []
         if (passport_number.nil? || passport_number.empty?) &&

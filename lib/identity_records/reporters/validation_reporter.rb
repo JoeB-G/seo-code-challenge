@@ -10,7 +10,7 @@ module IdentityRecords
       end
 
       def report(valid_people, invalid_people)
-        MetricsReporter.report_metrics(valid_people, invalid_people)
+        MetricsReporter.output(valid_people, invalid_people)
         ValidRecordsXmlGenerator.generate(valid_people, @output_directory, @timestamp)
         InvalidRecordsXmlGenerator.generate(invalid_people, @output_directory, @timestamp)
       end

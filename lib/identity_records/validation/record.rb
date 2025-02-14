@@ -15,11 +15,11 @@ module IdentityRecords
         errors[:last_name] = last_name_errors unless last_name_errors.empty?
 
         # Age validation
-        age_errors = AgeValidator.validate(record.dateOfBirth)
+        age_errors = Age.validate(record.dateOfBirth)
         errors[:date_of_birth] = age_errors unless age_errors.empty?
 
         # Address validation
-        address_errors = AddressValidator.validate(record.Address)
+        address_errors = Address.validate(record.Address)
         errors[:address] = address_errors unless address_errors.empty?
 
         # Years at address validation
@@ -27,7 +27,7 @@ module IdentityRecords
         errors[:years_at_address] = years_errors unless years_errors.empty?
 
         # Identification validation
-        id_errors = IdentificationValidator.validate(
+        id_errors = Identification.validate(
           record.passportNumber,
           record.nationalInsuranceNumber
         )
